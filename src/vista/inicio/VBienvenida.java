@@ -29,23 +29,23 @@ public class VBienvenida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lbNombre = new javax.swing.JLabel();
+        lbNickName = new javax.swing.JLabel();
         txtFNombre = new javax.swing.JTextField();
         txtFNickName = new javax.swing.JTextField();
         btnInicioPartida = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         btnCrearPlantas = new javax.swing.JButton();
         btnCrearAnimales = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnCrearProductos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("My Farm");
         setName("Bienvenida"); // NOI18N
 
-        jLabel1.setText("Nombre");
+        lbNombre.setText("Nombre");
 
-        jLabel2.setText("NickName");
+        lbNickName.setText("NickName");
 
         txtFNombre.setToolTipText("");
         txtFNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class VBienvenida extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Crear productos");
+        btnCrearProductos.setText("Crear productos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,8 +91,8 @@ public class VBienvenida extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnInicioPartida)
                     .addComponent(txtFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
+                    .addComponent(lbNickName)
+                    .addComponent(lbNombre)
                     .addComponent(txtFNickName, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -100,7 +100,7 @@ public class VBienvenida extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCrearPlantas)
                     .addComponent(btnCrearAnimales)
-                    .addComponent(jButton1))
+                    .addComponent(btnCrearProductos))
                 .addContainerGap(98, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -109,11 +109,11 @@ public class VBienvenida extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(67, 67, 67)
-                        .addComponent(jLabel1)
+                        .addComponent(lbNombre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
-                        .addComponent(jLabel2)
+                        .addComponent(lbNickName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtFNickName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(48, 48, 48)
@@ -124,10 +124,10 @@ public class VBienvenida extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addComponent(btnCrearPlantas)
-                        .addGap(61, 61, 61)
+                        .addGap(71, 71, 71)
                         .addComponent(btnCrearAnimales)
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton1)))
+                        .addGap(64, 64, 64)
+                        .addComponent(btnCrearProductos)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
@@ -153,11 +153,11 @@ public class VBienvenida extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearAnimales;
     private javax.swing.JButton btnCrearPlantas;
+    private javax.swing.JButton btnCrearProductos;
     private javax.swing.JButton btnInicioPartida;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lbNickName;
+    private javax.swing.JLabel lbNombre;
     private javax.swing.JTextField txtFNickName;
     private javax.swing.JTextField txtFNombre;
     // End of variables declaration//GEN-END:variables
