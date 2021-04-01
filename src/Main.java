@@ -1,4 +1,5 @@
-import vista.inicio.VBienvenida;
+import controlador.inicio.InicioControlador;
+import vista.inicio.BienvenidaVista;
 
 /**
  *
@@ -6,7 +7,8 @@ import vista.inicio.VBienvenida;
  */
 public class Main {
     public static void main(String[] args) {
-        VBienvenida inicio = new VBienvenida();
-        
+        BienvenidaVista bienvenida = new BienvenidaVista();
+        InicioControlador inicio = new InicioControlador(bienvenida);
+        inicio.iniciar();
     }    
 }
