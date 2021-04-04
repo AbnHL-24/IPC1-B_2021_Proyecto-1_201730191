@@ -29,7 +29,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="My Farm"/>
+    <Property name="title" type="java.lang.String" value="My Farm - Juego"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[800, 600]"/>
     </Property>
@@ -74,10 +74,8 @@
               <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="pnlDatosTablero" alignment="1" max="32767" attributes="0"/>
-                      <Component id="pnlTablero" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="pnlDatosTablero" alignment="1" max="32767" attributes="0"/>
+                  <Component id="pnlTablero" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="jSeparator2" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>

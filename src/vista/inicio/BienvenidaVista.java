@@ -43,7 +43,7 @@ public class BienvenidaVista extends javax.swing.JFrame {
         btnCrearProductos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("My Farm");
+        setTitle("My Farm - Bienvenida");
         setName("Bienvenida"); // NOI18N
 
         lbNombre.setText("Nombre");

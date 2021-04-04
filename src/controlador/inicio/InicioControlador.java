@@ -6,6 +6,11 @@ import vista.inicio.BienvenidaVista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/*
+ * Controlador del inicio que se encarga de crear la partida o las opciones para expandir el juego
+ * @author abnerhl
+ */
+
 public class InicioControlador implements ActionListener {
     private BienvenidaVista bienvenida;
 
@@ -18,15 +23,24 @@ public class InicioControlador implements ActionListener {
         this.bienvenida.getBtnCrearProductos().addActionListener(this);
     }
 
+    /*
+     * Metodo iniciar() que se encarga de cargar la interfaz grafica del menu inicio.
+     */
     public void iniciar() {
         this.bienvenida.setResizable(false);
         this.bienvenida.setLocationRelativeTo(null);
         this.bienvenida.setVisible(true);
     }
+
+    /*
+     * Metodo actionPerformed utilizado para escuchar los eventos en los botones de la interfaz grafica.
+     * @param e es el escuchador del evento.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.bienvenida.getBtnInicioPartida()) {
-            System.out.println("Iniciar partida");
+            IniciarPartidaControlador iniciarPartida =  new IniciarPartidaControlador(this.bienvenida);
+            iniciarPartida.generarPartida();
         } else if (e.getSource() == this.bienvenida.getBtnCrearAnimales()) {
             System.out.println("Crear animales");
         } else if (e.getSource() == this.bienvenida.getBtnCrearPlantas()) {

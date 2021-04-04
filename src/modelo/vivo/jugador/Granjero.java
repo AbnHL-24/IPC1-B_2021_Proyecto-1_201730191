@@ -9,8 +9,8 @@ import modelo.vivo.SerVivo;
 public class Granjero implements SerVivo {
     String nombre;
     String nickName;
-    long puntosDeVida;
-    long oro;
+    int puntosDeVida = 100;
+    long oro = 50;
     long oroGenerado;
     long alimentooConsumido;
 
@@ -24,11 +24,19 @@ public class Granjero implements SerVivo {
         this.nickName = nickName;
     }
 
-    public long getPuntosDeVida() {
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public int getPuntosDeVida() {
         return puntosDeVida;
     }
 
-    public void setPuntosDeVida(long puntosDeVida) {
+    public void setPuntosDeVida(int puntosDeVida) {
         this.puntosDeVida = puntosDeVida;
     }
 

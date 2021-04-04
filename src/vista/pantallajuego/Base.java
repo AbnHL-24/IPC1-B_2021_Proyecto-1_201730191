@@ -51,7 +51,7 @@ public class Base extends javax.swing.JFrame {
         mnReportes = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("My Farm");
+        setTitle("My Farm - Juego");
         setMinimumSize(new java.awt.Dimension(800, 600));
 
         lblNombre.setText("Nombre");
@@ -154,9 +154,8 @@ public class Base extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(pnlDatosTablero, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(pnlTablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnlDatosTablero, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlTablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jSeparator2)
                         .addContainerGap())))
@@ -242,6 +241,21 @@ public class Base extends javax.swing.JFrame {
         return pnlTablero;
     }
 
-    
+    public void setLblNickName(JLabel lblNickName) {
+        this.lblNickName = lblNickName;
+    }
+
+    public void setLblNombre(JLabel lblNombre) {
+        this.lblNombre = lblNombre;
+    }
+
+    public void setLblOro(JLabel lblOro) {
+        this.lblOro = lblOro;
+    }
+
+    public void setLblPuntosDeVida(JLabel lblPuntosDeVida) {
+        this.lblPuntosDeVida = lblPuntosDeVida;
+    }
+
     
 }
