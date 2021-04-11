@@ -3,6 +3,7 @@ package modelo.vivo.animal;
 import modelo.vivo.SerVivo;
 
 public abstract class Animal implements SerVivo {
+    TipoAnimal tipoAnimal;
     int edad;
     long comidaConsumida;
     int factorGenetico;
@@ -17,7 +18,8 @@ public abstract class Animal implements SerVivo {
      * @param puntosDeVida es la cantidad de puntos que vida que tiene el animal.
      * @author abnerhl
      */
-    public Animal (int edad, long comidaConsumida, int factorGenetico, int espacioRequerido, int puntosDeVida) {
+    public Animal (TipoAnimal tipoAnimal, int edad, long comidaConsumida, int factorGenetico, int espacioRequerido, int puntosDeVida) {
+        this.tipoAnimal = tipoAnimal;
         this.edad = edad;
         this.comidaConsumida = comidaConsumida;
         this.factorGenetico = factorGenetico;

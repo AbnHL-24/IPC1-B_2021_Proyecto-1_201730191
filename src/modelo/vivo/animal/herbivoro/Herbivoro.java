@@ -1,6 +1,7 @@
 package modelo.vivo.animal.herbivoro;
 
 import modelo.vivo.animal.Animal;
+import modelo.vivo.animal.TipoAnimal;
 
 /*
  * Clase Herbivoro utilizada para generar animales herbivoros;
@@ -15,8 +16,8 @@ public class Herbivoro extends Animal {
      * @param puntosDeVida es la cantidad de puntos que vida que tiene el animal.
      * @author abnerhl
      */
-    public Herbivoro(int edad, long comidaConsumida, int factorGenetico, int espacioRequerido, int puntosDeVida) {
-        super(edad, comidaConsumida, factorGenetico, espacioRequerido, puntosDeVida);
+    public Herbivoro(TipoAnimal tipoAnimal, int edad, long comidaConsumida, int factorGenetico, int espacioRequerido, int puntosDeVida) {
+        super(tipoAnimal, edad, comidaConsumida, factorGenetico, espacioRequerido, puntosDeVida);
     }
 
     /*

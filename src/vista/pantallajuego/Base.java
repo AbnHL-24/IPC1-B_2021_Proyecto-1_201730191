@@ -39,11 +39,11 @@ public class Base extends javax.swing.JFrame {
         lblNickName = new javax.swing.JLabel();
         lblPuntosDeVida = new javax.swing.JLabel();
         lblOro = new javax.swing.JLabel();
-        pnlTablero = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         pnlDatosTablero = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+        scrlPaneTablero = new javax.swing.JScrollPane();
+        pnlTablero = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnArchivo = new javax.swing.JMenu();
         mnMercado = new javax.swing.JMenu();
@@ -69,7 +69,7 @@ public class Base extends javax.swing.JFrame {
             .addGroup(pnlDatosUsuarioLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(lblNombre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
                 .addComponent(lblNickName)
                 .addGap(227, 227, 227)
                 .addComponent(lblPuntosDeVida)
@@ -89,22 +89,6 @@ public class Base extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
-        javax.swing.GroupLayout pnlTableroLayout = new javax.swing.GroupLayout(pnlTablero);
-        pnlTablero.setLayout(pnlTableroLayout);
-        pnlTableroLayout.setHorizontalGroup(
-            pnlTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1046, Short.MAX_VALUE)
-        );
-        pnlTableroLayout.setVerticalGroup(
-            pnlTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTableroLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout pnlDatosTableroLayout = new javax.swing.GroupLayout(pnlDatosTablero);
         pnlDatosTablero.setLayout(pnlDatosTableroLayout);
         pnlDatosTableroLayout.setHorizontalGroup(
@@ -117,6 +101,21 @@ public class Base extends javax.swing.JFrame {
         );
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        scrlPaneTablero.setToolTipText("");
+
+        javax.swing.GroupLayout pnlTableroLayout = new javax.swing.GroupLayout(pnlTablero);
+        pnlTablero.setLayout(pnlTableroLayout);
+        pnlTableroLayout.setHorizontalGroup(
+            pnlTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1031, Short.MAX_VALUE)
+        );
+        pnlTableroLayout.setVerticalGroup(
+            pnlTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 699, Short.MAX_VALUE)
+        );
+
+        scrlPaneTablero.setViewportView(pnlTablero);
 
         mnArchivo.setText("Archivo");
         jMenuBar1.add(mnArchivo);
@@ -138,8 +137,9 @@ public class Base extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlDatosUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlTablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
+                .addComponent(scrlPaneTablero)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnlDatosTablero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,9 +155,10 @@ public class Base extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlDatosTablero, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlTablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jSeparator2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
+                            .addComponent(scrlPaneTablero))
                         .addContainerGap())))
         );
 
@@ -165,7 +166,6 @@ public class Base extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblNickName;
@@ -179,15 +179,14 @@ public class Base extends javax.swing.JFrame {
     private javax.swing.JPanel pnlDatosTablero;
     private javax.swing.JPanel pnlDatosUsuario;
     private javax.swing.JPanel pnlTablero;
+    private javax.swing.JScrollPane scrlPaneTablero;
     // End of variables declaration//GEN-END:variables
 
     public JMenuBar getjMenuBar1() {
         return jMenuBar1;
     }
 
-    public JScrollPane getjScrollPane1() {
-        return jScrollPane1;
-    }
+
 
     public JSeparator getjSeparator1() {
         return jSeparator1;
@@ -257,5 +256,10 @@ public class Base extends javax.swing.JFrame {
         this.lblPuntosDeVida = lblPuntosDeVida;
     }
 
+    public JScrollPane getScrlPaneTablero() {
+        return scrlPaneTablero;
+    }
+
+    
     
 }

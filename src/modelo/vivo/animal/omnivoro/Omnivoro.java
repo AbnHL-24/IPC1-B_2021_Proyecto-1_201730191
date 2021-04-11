@@ -1,10 +1,11 @@
 package modelo.vivo.animal.omnivoro;
 
 import modelo.vivo.animal.Animal;
+import modelo.vivo.animal.TipoAnimal;
 
 public class Omnivoro extends Animal {
-    public Omnivoro(int edad, long comidaConsumida, int factorGenetico, int espacioRequerido, int puntosDeVida) {
-        super(edad, comidaConsumida, factorGenetico, espacioRequerido, puntosDeVida);
+    public Omnivoro(TipoAnimal tipoAnimal, int edad, long comidaConsumida, int factorGenetico, int espacioRequerido, int puntosDeVida) {
+        super(tipoAnimal, edad, comidaConsumida, factorGenetico, espacioRequerido, puntosDeVida);
     }
 
     /*
