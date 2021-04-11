@@ -47,18 +47,19 @@ public class IniciarPartidaControlador {
         base.getLblPuntosDeVida().setText("Puntos de vida: " + String.valueOf(jugador.getPuntosDeVida()));
         base.getLblOro().setText("Oro: " + String.valueOf(jugador.getOro()));
 
-        //lo siguiente son pruebas
-        //base.getPnlTablero().setLayout(new GridLayout(tamanyoTablero * tamanyoBoton, tamanyoTablero * tamanyoBoton));
         base.getPnlTablero().setLayout(new GridLayout(tamanyoTablero, tamanyoTablero));
         inciarTablero();
         base.getPnlTablero().setPreferredSize(new Dimension(tamanyoTablero * tamanyoBoton, tamanyoTablero * tamanyoBoton));
         iniciarBotones(base);
-
         base.getScrlPaneTablero().setViewportView(base.getPnlTablero());
 
-        System.out.println("Prueba");
+        TableroControlador tableroControlador = new TableroControlador(this.tablero, this.botones);
+        tableroControlador.iniciar();
     }
 
+    /*
+     * Crea la matriz botones para mostrar en la IU.
+     */
     private void iniciarBotones(Base base) {
         for (int i = 0; i < tamanyoTablero; i++) {
             for (int j = 0; j < tamanyoTablero; j++) {
@@ -67,8 +68,23 @@ public class IniciarPartidaControlador {
                 this.botones[i][j] = btn;
 
                 this.botones[i][j].setSize(tamanyoBoton, tamanyoBoton);
-                this.botones[i][j].setToolTipText(this.tablero[i][j].tipoDeSuelo());
+                if (this.tablero[i][j].isEstadoCompraSuelo()) {
+                    this.botones[i][j].setToolTipText(this.tablero[i][j].getTipoDeSuelo());
+                }
                 this.botones[i][j].setName(i + "," +j);
+
+                if (this.tablero[i][j].isEstadoCompraSuelo()) {
+                    if ("Grama".equals(this.tablero[i][j].getTipoDeSuelo())) {
+                        btn.setBackground(Color.GREEN);
+                    } else if ("Agua".equals(this.tablero[i][j].getTipoDeSuelo())) {
+                        btn.setBackground(Color.blue);
+                    } else if ("Desierto".equals(this.tablero[i][j].getTipoDeSuelo())) {
+                        btn.setBackground(Color.orange);
+                    }
+                } else {
+                    btn.setBackground(Color.gray);
+                }
+
                 base.getPnlTablero().add(this.botones[i][j]);
                 //base.getPnlTablero().validate();
                 //base.getPnlTablero().repaint();
@@ -78,7 +94,7 @@ public class IniciarPartidaControlador {
     }
 
     /*
-     * Crea el tablero al iniciar el juego.
+     * Crea la matriz tablero de suelos.
      */
     private void inciarTablero() {
         for (int i = 0; i < tamanyoTablero; i++) {

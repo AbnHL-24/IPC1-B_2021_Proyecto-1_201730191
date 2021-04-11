@@ -30,7 +30,7 @@ public class Suelo{
         this.disponibilidadDeSuelo = disponibilidadDeSuelo;
     }
 
-    public String tipoDeSuelo() {
+    public String getTipoDeSuelo() {
         return "Suelo";
     };
 

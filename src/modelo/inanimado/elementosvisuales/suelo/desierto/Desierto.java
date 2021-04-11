@@ -8,7 +8,7 @@ public class Desierto extends Suelo {
     }
 
     @Override
-    public String tipoDeSuelo() {
+    public String getTipoDeSuelo() {
         return "Desierto";
     }
 }

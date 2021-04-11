@@ -49,7 +49,7 @@ public class Grama extends Suelo {
     }
 
     @Override
-    public String tipoDeSuelo() {
+    public String getTipoDeSuelo() {
         return "Grama";
     }
 }

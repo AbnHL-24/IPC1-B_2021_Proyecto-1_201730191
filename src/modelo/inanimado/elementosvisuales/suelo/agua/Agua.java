@@ -8,7 +8,7 @@ public class Agua extends Suelo {
     }
 
     @Override
-    public String tipoDeSuelo() {
+    public String getTipoDeSuelo() {
         return "Agua";
     }
 }
