@@ -3,12 +3,22 @@ package modelo.vivo.animal.omnivoro;
 import modelo.vivo.animal.Animal;
 import modelo.vivo.animal.TipoAnimal;
 
+/**
+ * Clase Omnivoro para animales que comen de todo.
+ * @author abnerhl
+ */
 public class Omnivoro extends Animal {
-    public Omnivoro(TipoAnimal tipoAnimal, int edad, long comidaConsumida, int factorGenetico, int espacioRequerido, int puntosDeVida) {
-        super(tipoAnimal, edad, comidaConsumida, factorGenetico, espacioRequerido, puntosDeVida);
+
+    /**
+     * Constructod de Homnivoro
+     * @param tipoAnimal enum que especifica el tipo de animal.
+     * @param nombreAnimal String con el nombre del animal.
+     */
+    public Omnivoro(TipoAnimal tipoAnimal, String nombreAnimal) {
+        super(tipoAnimal, nombreAnimal);
     }
 
-    /*
+    /**
      * Metodo que se utiliza para recoger los producros que el animal crea al estar vivo
      */
     @Override
@@ -16,15 +26,15 @@ public class Omnivoro extends Animal {
 
     }
 
-    /*
+    /**
      * Metodo que se utiliza para recoger los producros que el animal crea al estar vivo
      */
     @Override
-    public void recogerProductos() {
+    public void recoger() {
 
     }
 
-    /*
+    /**
      * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
      */
     @Override

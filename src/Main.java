@@ -2,7 +2,7 @@ import controlador.inicio.InicioControlador;
 import vista.inicio.BienvenidaVista;
 
 /**
- *
+ * CLase Main, usada pere iniciar el programa.
  * @author abnerhl
  */
 public class Main {

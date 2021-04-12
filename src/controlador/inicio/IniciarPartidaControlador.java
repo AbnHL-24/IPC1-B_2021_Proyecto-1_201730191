@@ -1,5 +1,6 @@
 package controlador.inicio;
 
+import modelo.inanimado.Granja;
 import modelo.inanimado.elementosvisuales.suelo.Suelo;
 import modelo.inanimado.elementosvisuales.suelo.agua.Agua;
 import modelo.inanimado.elementosvisuales.suelo.desierto.Desierto;
@@ -12,11 +13,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-/*
+/**
  * Clase IniciarPartidaControlador sirve para empezar el juego.
+ * @author abnerhl
  */
 public class IniciarPartidaControlador {
     private BienvenidaVista bienvenida;
+    Granjero jugador;
+    Granja granja;
     private int tamanyoTablero = 6;
     private int tamanyoBoton = 150;
     private Suelo[][] tablero = new Suelo[tamanyoTablero][tamanyoTablero];
@@ -27,14 +31,16 @@ public class IniciarPartidaControlador {
         this.bienvenida = bienvenida;
     }
 
-    /*
+    /**
      * Metodo generarPartida encargado de iniciar lo necesario para empezar un juego.
      */
     public void generarPartida() {
         //Se crea al granjero
-        Granjero jugador = new Granjero(bienvenida.getTxtFNombre().getText(), bienvenida.getTxtFNickName().getText());
+        jugador = new Granjero(bienvenida.getTxtFNombre().getText(), bienvenida.getTxtFNickName().getText());
+        granja = new Granja(jugador);
+        granja.iniciarGranja();
 
-        //Se crea la base sel juego y muestra en pantalla
+        //Se crea la base del juego y muestra en pantalla
         Base base = new Base();
         base.setResizable(true);
         base.setLocationRelativeTo(null);
@@ -47,18 +53,26 @@ public class IniciarPartidaControlador {
         base.getLblPuntosDeVida().setText("Puntos de vida: " + String.valueOf(jugador.getPuntosDeVida()));
         base.getLblOro().setText("Oro: " + String.valueOf(jugador.getOro()));
 
+        //Establesco un gridlayout a pnlTablero.
         base.getPnlTablero().setLayout(new GridLayout(tamanyoTablero, tamanyoTablero));
+        //Llamo al metodo inciarTablero que esta abajo.
         inciarTablero();
+        //establesco el tamaño del pnlTablero que sera el tamaño del boton por la cantidad de botones.
         base.getPnlTablero().setPreferredSize(new Dimension(tamanyoTablero * tamanyoBoton, tamanyoTablero * tamanyoBoton));
+        //Llamo al metodo iniciarBotones que esta abajo
         iniciarBotones(base);
+        // Le establesco el pnlTablero al scrlPaneTablero.
         base.getScrlPaneTablero().setViewportView(base.getPnlTablero());
 
+        //Llamo al cotrolador que escucha los clicks en los botones.
         TableroControlador tableroControlador = new TableroControlador(this.tablero, this.botones);
         tableroControlador.iniciar();
+        System.out.println("prueba");
     }
 
-    /*
+    /**
      * Crea la matriz botones para mostrar en la IU.
+     * @param base es una implementacion de la vista Base donde se genera la interfaz principal del juego.
      */
     private void iniciarBotones(Base base) {
         for (int i = 0; i < tamanyoTablero; i++) {
@@ -93,7 +107,7 @@ public class IniciarPartidaControlador {
         }
     }
 
-    /*
+    /**
      * Crea la matriz tablero de suelos.
      */
     private void inciarTablero() {

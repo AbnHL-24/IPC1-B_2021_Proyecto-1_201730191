@@ -1,27 +1,36 @@
 package modelo.inanimado.productos;
 
+/**
+ * Clase Producto es el molde para todos los productos
+ * @author abnerhl
+ */
 public class Producto {
-    protected String[] nombreProductos;
-    protected int[] porcentajeProductos;
+    protected String nombreProducto;
+    protected int cantidadProducto;
 
-    public Producto(String[] nombreProductos, int[] porcentajeProductos) {
-        this.nombreProductos = nombreProductos;
-        this.porcentajeProductos = porcentajeProductos;
+    /**
+     * Contructor de la clase PRoducto
+     * @param nombreProducto Es el nombre del producto.
+     * @param cantidadProducto Es la cantidad del producto
+     */
+    public Producto(String nombreProducto, int cantidadProducto) {
+        this.nombreProducto = nombreProducto;
+        this.cantidadProducto = cantidadProducto;
     }
 
-    public String[] getNombreProductos() {
-        return nombreProductos;
+    public String getNombreProducto() {
+        return nombreProducto;
     }
 
-    public void setNombreProductos(String[] nombreProductos) {
-        this.nombreProductos = nombreProductos;
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
     }
 
-    public int[] getPorcentajeProductos() {
-        return porcentajeProductos;
+    public int getCantidadProducto() {
+        return cantidadProducto;
     }
 
-    public void setPorcentajeProductos(int[] porcentajeProductos) {
-        this.porcentajeProductos = porcentajeProductos;
+    public void setCantidadProducto(int cantidadProducto) {
+        this.cantidadProducto = cantidadProducto;
     }
 }
