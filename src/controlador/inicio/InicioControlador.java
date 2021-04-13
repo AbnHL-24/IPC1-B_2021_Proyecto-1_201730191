@@ -1,6 +1,5 @@
 package controlador.inicio;
 
-import modelo.vivo.jugador.Granjero;
 import vista.inicio.BienvenidaVista;
 
 import java.awt.event.ActionEvent;

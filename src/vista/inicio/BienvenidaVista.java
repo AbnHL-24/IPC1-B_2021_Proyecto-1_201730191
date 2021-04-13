@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 /**
- *
+ * Clase de la interfac inicial del juego.
  * @author abnerhl
  */
 public class BienvenidaVista extends javax.swing.JFrame {

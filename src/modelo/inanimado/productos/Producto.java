@@ -33,4 +33,6 @@ public class Producto {
     public void setCantidadProducto(int cantidadProducto) {
         this.cantidadProducto = cantidadProducto;
     }
+
+
 }

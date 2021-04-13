@@ -1,5 +1,8 @@
 unnamed package
+controlador.barramenus
+controlador.barramenus.bodega
 controlador.inicio
+modelo.inanimado
 modelo.inanimado.elementosvisuales
 modelo.inanimado.elementosvisuales.suelo
 modelo.inanimado.elementosvisuales.suelo.agua
@@ -16,5 +19,6 @@ modelo.vivo.jugador
 modelo.vivo.vegetal
 modelo.vivo.vegetal.fruta
 modelo.vivo.vegetal.grano
+vista.barramenus.bodega
 vista.inicio
 vista.pantallajuego

@@ -1,5 +1,6 @@
 package controlador.inicio;
 
+import controlador.barramenus.MenusControlador;
 import modelo.inanimado.Granja;
 import modelo.inanimado.elementosvisuales.suelo.Suelo;
 import modelo.inanimado.elementosvisuales.suelo.agua.Agua;
@@ -38,6 +39,7 @@ public class IniciarPartidaControlador {
         //Se crea al granjero
         jugador = new Granjero(bienvenida.getTxtFNombre().getText(), bienvenida.getTxtFNickName().getText());
         granja = new Granja(jugador);
+        //Crea las cosas que tiene la granja, animales, plantas, etc.
         granja.iniciarGranja();
 
         //Se crea la base del juego y muestra en pantalla
@@ -67,6 +69,9 @@ public class IniciarPartidaControlador {
         //Llamo al cotrolador que escucha los clicks en los botones.
         TableroControlador tableroControlador = new TableroControlador(this.tablero, this.botones);
         tableroControlador.iniciar();
+        MenusControlador menusControlador = new MenusControlador(base, granja);
+        menusControlador.iniciar();
+
         System.out.println("prueba");
     }
 

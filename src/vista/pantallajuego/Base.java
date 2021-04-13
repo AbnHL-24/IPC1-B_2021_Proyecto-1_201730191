@@ -8,12 +8,13 @@ package vista.pantallajuego;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 
 /**
- *
+ * Clase que crea la interfaz base (principal) del juego.
  * @author abnerhl
  */
 public class Base extends javax.swing.JFrame {
@@ -44,11 +45,17 @@ public class Base extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         scrlPaneTablero = new javax.swing.JScrollPane();
         pnlTablero = new javax.swing.JPanel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        mnbMenus = new javax.swing.JMenuBar();
         mnArchivo = new javax.swing.JMenu();
-        mnMercado = new javax.swing.JMenu();
+        mniArchivo = new javax.swing.JMenuItem();
         mnBodega = new javax.swing.JMenu();
+        mniBodega = new javax.swing.JMenuItem();
+        mnMercado = new javax.swing.JMenu();
+        mniMercado = new javax.swing.JMenuItem();
         mnReportes = new javax.swing.JMenu();
+        mniReportePartidas = new javax.swing.JMenuItem();
+        mniReporteAnimales = new javax.swing.JMenuItem();
+        mniReportePlantas = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("My Farm - Juego");
@@ -118,18 +125,40 @@ public class Base extends javax.swing.JFrame {
         scrlPaneTablero.setViewportView(pnlTablero);
 
         mnArchivo.setText("Archivo");
-        jMenuBar1.add(mnArchivo);
 
-        mnMercado.setText("Mercado");
-        jMenuBar1.add(mnMercado);
+        mniArchivo.setText("Archivo");
+        mnArchivo.add(mniArchivo);
+
+        mnbMenus.add(mnArchivo);
 
         mnBodega.setText("Bodega");
-        jMenuBar1.add(mnBodega);
+
+        mniBodega.setText("Bodega");
+        mnBodega.add(mniBodega);
+
+        mnbMenus.add(mnBodega);
+
+        mnMercado.setText("Mercado");
+
+        mniMercado.setText("Mercado");
+        mnMercado.add(mniMercado);
+
+        mnbMenus.add(mnMercado);
 
         mnReportes.setText("Reportes");
-        jMenuBar1.add(mnReportes);
 
-        setJMenuBar(jMenuBar1);
+        mniReportePartidas.setText("Reportes de partidas.");
+        mnReportes.add(mniReportePartidas);
+
+        mniReporteAnimales.setText("Reportes de animales.");
+        mnReportes.add(mniReporteAnimales);
+
+        mniReportePlantas.setText("Reporte de Plantas.");
+        mnReportes.add(mniReportePlantas);
+
+        mnbMenus.add(mnReportes);
+
+        setJMenuBar(mnbMenus);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -165,7 +194,6 @@ public class Base extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblNickName;
@@ -176,15 +204,18 @@ public class Base extends javax.swing.JFrame {
     private javax.swing.JMenu mnBodega;
     private javax.swing.JMenu mnMercado;
     private javax.swing.JMenu mnReportes;
+    private javax.swing.JMenuBar mnbMenus;
+    private javax.swing.JMenuItem mniArchivo;
+    private javax.swing.JMenuItem mniBodega;
+    private javax.swing.JMenuItem mniMercado;
+    private javax.swing.JMenuItem mniReporteAnimales;
+    private javax.swing.JMenuItem mniReportePartidas;
+    private javax.swing.JMenuItem mniReportePlantas;
     private javax.swing.JPanel pnlDatosTablero;
     private javax.swing.JPanel pnlDatosUsuario;
     private javax.swing.JPanel pnlTablero;
     private javax.swing.JScrollPane scrlPaneTablero;
     // End of variables declaration//GEN-END:variables
-
-    public JMenuBar getjMenuBar1() {
-        return jMenuBar1;
-    }
 
 
 
@@ -210,22 +241,6 @@ public class Base extends javax.swing.JFrame {
 
     public JLabel getLblPuntosDeVida() {
         return lblPuntosDeVida;
-    }
-
-    public JMenu getMnArchivo() {
-        return mnArchivo;
-    }
-
-    public JMenu getMnBodega() {
-        return mnBodega;
-    }
-
-    public JMenu getMnMercado() {
-        return mnMercado;
-    }
-
-    public JMenu getMnReportes() {
-        return mnReportes;
     }
 
     public JPanel getPnlDatosTablero() {
@@ -258,6 +273,34 @@ public class Base extends javax.swing.JFrame {
 
     public JScrollPane getScrlPaneTablero() {
         return scrlPaneTablero;
+    }
+
+    public JMenuBar getMnbMenus() {
+        return mnbMenus;
+    }
+
+    public JMenuItem getMniReporteAnimales() {
+        return mniReporteAnimales;
+    }
+
+    public JMenuItem getMniReportePartidas() {
+        return mniReportePartidas;
+    }
+
+    public JMenuItem getMniReportePlantas() {
+        return mniReportePlantas;
+    }
+
+    public JMenuItem getMniArchivo() {
+        return mniArchivo;
+    }
+
+    public JMenuItem getMniBodega() {
+        return mniBodega;
+    }
+
+    public JMenuItem getMniMercado() {
+        return mniMercado;
     }
 
     

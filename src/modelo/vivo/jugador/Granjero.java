@@ -11,7 +11,7 @@ public class Granjero implements SerVivo {
     String nickName;
     int puntosDeVida = 100;
     long oro = 50;
-    long oroGenerado;
+    long oroGenerado = 0;
     long alimentooConsumido;
 
     /**

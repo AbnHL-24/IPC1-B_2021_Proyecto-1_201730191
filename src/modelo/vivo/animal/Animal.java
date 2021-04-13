@@ -109,4 +109,76 @@ public abstract class Animal implements SerVivo {
      * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
      */
     public abstract void morir();
+
+    public TipoAnimal getTipoAnimal() {
+        return tipoAnimal;
+    }
+
+    public void setTipoAnimal(TipoAnimal tipoAnimal) {
+        this.tipoAnimal = tipoAnimal;
+    }
+
+    public String getNombreAnimal() {
+        return nombreAnimal;
+    }
+
+    public void setNombreAnimal(String nombreAnimal) {
+        this.nombreAnimal = nombreAnimal;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public long getComidaConsumida() {
+        return comidaConsumida;
+    }
+
+    public void setComidaConsumida(long comidaConsumida) {
+        this.comidaConsumida = comidaConsumida;
+    }
+
+    public int getFactorGenetico() {
+        return factorGenetico;
+    }
+
+    public void setFactorGenetico(int factorGenetico) {
+        this.factorGenetico = factorGenetico;
+    }
+
+    public int getEspacioRequerido() {
+        return espacioRequerido;
+    }
+
+    public void setEspacioRequerido(int espacioRequerido) {
+        this.espacioRequerido = espacioRequerido;
+    }
+
+    public int getPuntosDeVida() {
+        return puntosDeVida;
+    }
+
+    public void setPuntosDeVida(int puntosDeVida) {
+        this.puntosDeVida = puntosDeVida;
+    }
+
+    public Random getRd() {
+        return rd;
+    }
+
+    public void setRd(Random rd) {
+        this.rd = rd;
+    }
 }
