@@ -49,21 +49,21 @@ public class Granja {
         animales = new Animal[2];
 
         animales[0] = new Animal(TipoAnimal.HERBIVORO, "Vaca");
-        String [] productosRecogerVaca = {"Leche"};
+        String[] productosRecogerVaca = {"Leche"};
         animales[0].setProductosParaRecoger(productosRecogerVaca);
         int[] cantProductosParaRecogerVaca = {100};
         animales[0].setCantProductosParaRecoger(cantProductosParaRecogerVaca);
-        String [] productosDestazarVaca = {"Cuero", "Carne"};
+        String[] productosDestazarVaca = {"Cuero", "Carne"};
         animales[0].setProductosParaDestazar(productosDestazarVaca);
         int[] cantProductosParaDestazarVaca = {25, 75};
         animales[0].setCantProductosParaDestazar(cantProductosParaDestazarVaca);
 
         animales[1] = new Animal(TipoAnimal.OMNIVORO, "Gallina");
-        String [] productosRecogerGallina = {"Huevos"};
+        String[] productosRecogerGallina = {"Huevos"};
         animales[1].setProductosParaRecoger(productosRecogerGallina);
         int[] cantProductosParaRecogerGallina = {100};
         animales[1].setCantProductosParaRecoger(cantProductosParaRecogerGallina);
-        String [] productosDestazarGallina = {"Carne"};
+        String[] productosDestazarGallina = {"Carne"};
         animales[1].setProductosParaDestazar(productosDestazarGallina);
         int[] cantProductosParaDestazarGallina = {100};
         animales[1].setCantProductosParaDestazar(cantProductosParaDestazarGallina);

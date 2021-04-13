@@ -3,6 +3,7 @@ controlador.barramenus
 controlador.barramenus.bodega
 controlador.barramenus.reportes
 controlador.inicio
+controlador.suelo.grama
 modelo.inanimado
 modelo.inanimado.elementosvisuales
 modelo.inanimado.elementosvisuales.suelo
@@ -14,8 +15,6 @@ modelo.inanimado.productos.alimento
 modelo.inanimado.productos.materiales
 modelo.vivo
 modelo.vivo.animal
-modelo.vivo.animal.herbivoro
-modelo.vivo.animal.omnivoro
 modelo.vivo.jugador
 modelo.vivo.vegetal
 modelo.vivo.vegetal.fruta
@@ -23,4 +22,5 @@ modelo.vivo.vegetal.grano
 vista.barramenus.bodega
 vista.barramenus.reportes
 vista.inicio
+vista.panelesdeinformacion.grama
 vista.pantallajuego

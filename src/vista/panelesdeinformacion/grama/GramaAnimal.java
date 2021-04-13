@@ -35,6 +35,7 @@ public class GramaAnimal extends javax.swing.JPanel {
         lblTipoAnimal = new javax.swing.JLabel();
         lblPuntosVida = new javax.swing.JLabel();
         lblHambre = new javax.swing.JLabel();
+        btnAlimentar = new javax.swing.JButton();
 
         btnObtenerProduccion.setText("Obtener produccion");
 
@@ -46,6 +47,8 @@ public class GramaAnimal extends javax.swing.JPanel {
 
         lblHambre.setText("Hambre");
 
+        btnAlimentar.setText("Alimentar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -53,6 +56,7 @@ public class GramaAnimal extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAlimentar)
                     .addComponent(lblHambre)
                     .addComponent(lblPuntosVida)
                     .addComponent(btnDestazar)
@@ -69,7 +73,9 @@ public class GramaAnimal extends javax.swing.JPanel {
                 .addComponent(lblPuntosVida)
                 .addGap(18, 18, 18)
                 .addComponent(lblHambre)
-                .addGap(103, 103, 103)
+                .addGap(62, 62, 62)
+                .addComponent(btnAlimentar)
+                .addGap(18, 18, 18)
                 .addComponent(btnObtenerProduccion)
                 .addGap(18, 18, 18)
                 .addComponent(btnDestazar)
@@ -79,6 +85,7 @@ public class GramaAnimal extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAlimentar;
     private javax.swing.JButton btnDestazar;
     private javax.swing.JButton btnObtenerProduccion;
     private javax.swing.JLabel lblHambre;
@@ -104,6 +111,10 @@ public class GramaAnimal extends javax.swing.JPanel {
 
     public JLabel getLblTipoAnimal() {
         return lblTipoAnimal;
+    }
+
+    public JButton getBtnAlimentar() {
+        return btnAlimentar;
     }
 
     

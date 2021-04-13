@@ -1,8 +1,9 @@
 package controlador.suelo.grama;
 
+import controlador.inicio.CrearAnimalControlador;
 import modelo.inanimado.Granja;
-import modelo.inanimado.elementosvisuales.suelo.Suelo;
 import modelo.inanimado.elementosvisuales.suelo.grama.Grama;
+import modelo.vivo.animal.Animal;
 import vista.panelesdeinformacion.grama.GramaAnimal;
 import vista.panelesdeinformacion.grama.GramaLimpia;
 import vista.pantallajuego.Base;
@@ -29,12 +30,14 @@ public class GramaControlador implements ActionListener {
             if (grama.getSerVivo() == null) {
                 gramaLimpia = new GramaLimpia();
                 establecerPanelLimpio();
-                gramaLimpia.getBtnCrearAnimal().addActionListener(this);
-                gramaLimpia.getBtnCrearPlanta().addActionListener(this);
+                gramaLimpia.getBtnAñadirAnimal().addActionListener(this);
+                gramaLimpia.getBtnAñadirPlanta().addActionListener(this);
 
             } else {
                 gramaAnimal = new GramaAnimal();
                 establecerPanelAnimal();
+                AnimalControladorL ac = new AnimalControladorL(granja, gramaAnimal, grama);
+                ac.iniciarControlador();
             }
         } else {
             System.out.println("Hay que comprar el suelo");
@@ -43,9 +46,10 @@ public class GramaControlador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == gramaLimpia.getBtnCrearAnimal()) {
-            System.out.println("Crear animal");
-        } else if (e.getSource() == gramaLimpia.getBtnCrearPlanta()) {
+        if (e.getSource() == gramaLimpia.getBtnAñadirAnimal()) {
+            AgregarAnimalControlador aac = new AgregarAnimalControlador(granja, grama, base);
+            aac.iniciarControlador();
+        } else if (e.getSource() == gramaLimpia.getBtnAñadirPlanta()) {
             System.out.println("Crear planta");
         }
     }
@@ -55,7 +59,7 @@ public class GramaControlador implements ActionListener {
         base.getPnlDatosTablero().repaint();
         gramaAnimal.setSize(base.getPnlDatosTablero().getSize());
         gramaAnimal.setVisible(true);
-        base.getPnlDatosTablero().add(gramaLimpia);
+        base.getPnlDatosTablero().add(gramaAnimal);
         base.getPnlDatosTablero().validate();
     }
 

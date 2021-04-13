@@ -219,4 +219,17 @@ public class Animal implements SerVivo {
         this.cantidadDeUnidadesDestazadas = cantidadDeUnidadesDestazadas;
     }
 
+
+    public void aumentarCantidad() {
+        cantidad++;
+        cantidadDeCriasCompradas++;
+    }
+
+    public void aumentarHambre() {
+        hambre++;
+    }
+
+    public void aumentarCrias() {
+
+    }
 }

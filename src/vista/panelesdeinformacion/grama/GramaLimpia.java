@@ -32,16 +32,16 @@ public class GramaLimpia extends javax.swing.JPanel {
 
         lblEstadoCompra = new javax.swing.JLabel();
         lblEstadoDisponibilidad = new javax.swing.JLabel();
-        btnCrearAnimal = new javax.swing.JButton();
-        btnCrearPlanta = new javax.swing.JButton();
+        btnAñadirAnimal = new javax.swing.JButton();
+        btnAñadirPlanta = new javax.swing.JButton();
 
         lblEstadoCompra.setText("Estado de compra:");
 
-        lblEstadoDisponibilidad.setText("E:stado de disponibilidad:");
+        lblEstadoDisponibilidad.setText("Estado de disponibilidad:");
 
-        btnCrearAnimal.setText("Crear animal");
+        btnAñadirAnimal.setText("Añadir animal");
 
-        btnCrearPlanta.setText("Crear planta");
+        btnAñadirPlanta.setText("Añadir planta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -50,11 +50,11 @@ public class GramaLimpia extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCrearPlanta)
-                    .addComponent(btnCrearAnimal)
+                    .addComponent(btnAñadirPlanta)
+                    .addComponent(btnAñadirAnimal)
                     .addComponent(lblEstadoDisponibilidad)
                     .addComponent(lblEstadoCompra))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -64,27 +64,27 @@ public class GramaLimpia extends javax.swing.JPanel {
                 .addGap(31, 31, 31)
                 .addComponent(lblEstadoDisponibilidad)
                 .addGap(90, 90, 90)
-                .addComponent(btnCrearAnimal)
+                .addComponent(btnAñadirAnimal)
                 .addGap(41, 41, 41)
-                .addComponent(btnCrearPlanta)
+                .addComponent(btnAñadirPlanta)
                 .addContainerGap(413, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCrearAnimal;
-    private javax.swing.JButton btnCrearPlanta;
+    private javax.swing.JButton btnAñadirAnimal;
+    private javax.swing.JButton btnAñadirPlanta;
     private javax.swing.JLabel lblEstadoCompra;
     private javax.swing.JLabel lblEstadoDisponibilidad;
     // End of variables declaration//GEN-END:variables
 
-    public JButton getBtnCrearAnimal() {
-        return btnCrearAnimal;
+    public JButton getBtnAñadirAnimal() {
+        return btnAñadirAnimal;
     }
 
-    public JButton getBtnCrearPlanta() {
-        return btnCrearPlanta;
+    public JButton getBtnAñadirPlanta() {
+        return btnAñadirPlanta;
     }
 
     public JLabel getLblEstadoCompra() {

@@ -19,6 +19,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnAlimentar" min="-2" max="-2" attributes="0"/>
                   <Component id="lblHambre" min="-2" max="-2" attributes="0"/>
                   <Component id="lblPuntosVida" min="-2" max="-2" attributes="0"/>
                   <Component id="btnDestazar" min="-2" max="-2" attributes="0"/>
@@ -38,7 +39,9 @@
               <Component id="lblPuntosVida" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lblHambre" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+              <Component id="btnAlimentar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnObtenerProduccion" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnDestazar" min="-2" max="-2" attributes="0"/>
@@ -71,6 +74,11 @@
     <Component class="javax.swing.JLabel" name="lblHambre">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hambre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAlimentar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Alimentar"/>
       </Properties>
     </Component>
   </SubComponents>

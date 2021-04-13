@@ -40,7 +40,9 @@ public class InicioControlador implements ActionListener {
             IniciarPartidaControlador iniciarPartida =  new IniciarPartidaControlador(this.bienvenida);
             iniciarPartida.generarPartida();
         } else if (e.getSource() == this.bienvenida.getBtnCrearAnimales()) {
-            System.out.println("Crear animales");
+            //Solucionar el pedo de la granja
+            //CrearAnimalControlador cac = new CrearAnimalControlador(granja);
+            //cac.iniciarControlador();
         } else if (e.getSource() == this.bienvenida.getBtnCrearPlantas()) {
             System.out.println("Crear plantas");
         } else if (e.getSource() == this.bienvenida.getBtnCrearProductos()) {

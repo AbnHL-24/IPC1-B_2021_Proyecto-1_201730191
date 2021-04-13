@@ -1,24 +1,37 @@
 package controlador.suelo.grama;
 
 import modelo.inanimado.Granja;
+import modelo.inanimado.elementosvisuales.suelo.grama.Grama;
 import modelo.vivo.animal.Animal;
+import vista.panelesdeinformacion.grama.GramaAnimal;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
 
-public class AnimalControlador implements Runnable {
+public class AnimalControlador implements Runnable{
     Animal animal;
     Granja granja;
+    Grama grama;
+    AnimalControladorL animalControladorL;
+
     boolean disponibilidadParaProducir = true;
     boolean vivo = true;
 
-    public AnimalControlador(Animal animal, Granja granja) {
-        this.animal = animal;
+    public AnimalControlador(Grama grama, Granja granja, AnimalControladorL animalControladorL) {
         this.granja = granja;
+        this.animalControladorL = animalControladorL;
+        this.grama = grama;
+        this.animal = (Animal) grama.getSerVivo();
     }
+
+
+
 
     @Override
     public void run() {
         do {
+            aumentarCrias();
             animal.setEdad(animal.getEdad() + 1);
             try {
                 TimeUnit.SECONDS.sleep(5);
@@ -26,21 +39,39 @@ public class AnimalControlador implements Runnable {
                 e.printStackTrace();
             }
             Producir();
-
+            hambre();
             restarVida();
             morir();
+            animalControladorL.actualizarDatos();
         } while (vivo);
-        //Anadir algo para chingarse al animal
+
+    }
+
+    private void aumentarCrias() {
+        for (int i = 0; i < granja.getAnimales().length; i++) {
+            if (animal.getNombreAnimal().equalsIgnoreCase(granja.getAnimales()[i].getNombreAnimal())) {
+                granja.getAnimales()[i].aumentarCrias();
+            }
+        }
+    }
+
+    private void hambre() {
+        animal.aumentarHambre();
     }
 
     private void morir() {
         if (animal.getPuntosDeVida() <= 0) {
             vivo = false;
+            grama.setSerVivo(null);
+
         }
     }
 
     private void restarVida() {
         int nuevaVida = animal.getPuntosDeVida() - 5;
+        if (animal.getHambre() >10) {
+            nuevaVida -= 5;
+        }
         animal.setPuntosDeVida(nuevaVida);
     }
 

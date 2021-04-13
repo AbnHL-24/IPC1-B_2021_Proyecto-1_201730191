@@ -19,12 +19,12 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnCrearPlanta" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCrearAnimal" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAñadirPlanta" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAñadirAnimal" min="-2" max="-2" attributes="0"/>
                   <Component id="lblEstadoDisponibilidad" min="-2" max="-2" attributes="0"/>
                   <Component id="lblEstadoCompra" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="81" max="32767" attributes="0"/>
+              <EmptySpace pref="85" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -36,9 +36,9 @@
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Component id="lblEstadoDisponibilidad" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-              <Component id="btnCrearAnimal" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAñadirAnimal" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-              <Component id="btnCrearPlanta" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAñadirPlanta" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="413" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -52,17 +52,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblEstadoDisponibilidad">
       <Properties>
-        <Property name="text" type="java.lang.String" value="E:stado de disponibilidad:"/>
+        <Property name="text" type="java.lang.String" value="Estado de disponibilidad:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnCrearAnimal">
+    <Component class="javax.swing.JButton" name="btnA&#xf1;adirAnimal">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Crear animal"/>
+        <Property name="text" type="java.lang.String" value="A&#xf1;adir animal"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnCrearPlanta">
+    <Component class="javax.swing.JButton" name="btnA&#xf1;adirPlanta">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Crear planta"/>
+        <Property name="text" type="java.lang.String" value="A&#xf1;adir planta"/>
       </Properties>
     </Component>
   </SubComponents>
