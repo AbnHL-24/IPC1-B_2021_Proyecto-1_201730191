@@ -23,6 +23,16 @@ public class Granjero implements SerVivo {
         this.nickName = nickName;
     }
 
+    /**
+     * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
+     */
+    @Override
+    public void morir() {
+        //implementar metodo perderVida
+        //implementar metodo consumirAlimento
+        //sacar los metodos anteriores y hacer que si vida == 0 entonces game over
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -55,13 +65,4 @@ public class Granjero implements SerVivo {
         this.alimentooConsumido = alimentooConsumido;
     }
 
-    /**
-     * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
-     */
-    @Override
-    public void morir() {
-        //implementar metodo perderVida
-        //implementar metodo consumirAlimento
-        //sacar los metodos anteriores y hacer que si vida == 0 entonces game over
-    }
 }

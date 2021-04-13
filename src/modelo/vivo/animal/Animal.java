@@ -8,7 +8,7 @@ import java.util.Random;
  *  Clase abstracta Animal que encapsula las caracteristicas mas basicas de los animales.
  * @author abnerhl
  */
-public abstract class Animal implements SerVivo {
+public class Animal implements SerVivo {
     TipoAnimal tipoAnimal;
     String nombreAnimal;
     int cantidad;
@@ -18,6 +18,7 @@ public abstract class Animal implements SerVivo {
     int[] cantProductosParaDestazar;
     int cantidadDeCriasCompradas;
     int cantidadDeUnidadesDestazadas;
+    int hambre;
 
     /**
      * edad es la edad del animal, utilizada para el metodo morir.
@@ -27,7 +28,7 @@ public abstract class Animal implements SerVivo {
     /**
      * comidaConsumida es la cantidad que el animal ha comida en lo que tiene de vida.
      */
-    long comidaConsumida;
+    int comidaConsumida;
 
     /**
      * factorGenetico es un numero utilizado para calcular la cantidad de comida generada por el animal.
@@ -62,6 +63,42 @@ public abstract class Animal implements SerVivo {
         this.puntosDeVida = 100;
     }
 
+    /**
+     * Recoge productos que crea un animal al estar vivo.
+     */
+    public void crearProductosARecoger() {
+
+    }
+
+    /**
+     * Metodo destazar() sirve para matar al animal y producir comida y/o alimentos.
+     */
+    public void destazar(){
+
+    }
+
+    /**
+     * Metodo que se utiliza para recoger los producros que el animal crea al estar vivo.
+     */
+    public void recoger(){
+
+    }
+
+    /**
+     * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
+     */
+    public void morir(){
+
+    }
+
+    public int getHambre() {
+        return hambre;
+    }
+
+    public void setHambre(int hambre) {
+        this.hambre = hambre;
+    }
+
     public String[] getProductosParaRecoger() {
         return productosParaRecoger;
     }
@@ -93,25 +130,6 @@ public abstract class Animal implements SerVivo {
     public void setCantProductosParaDestazar(int[] cantProductosParaDestazar) {
         this.cantProductosParaDestazar = cantProductosParaDestazar;
     }
-
-    public void crearProductosARecoger() {
-
-    }
-
-    /**
-     * Metodo destazar() sirve para matar al animal y producir comida y/o alimentos.
-     */
-    public abstract void destazar();
-
-    /**
-     * Metodo que se utiliza para recoger los producros que el animal crea al estar vivo.
-     */
-    public abstract void recoger();
-
-    /**
-     * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
-     */
-    public abstract void morir();
 
     public TipoAnimal getTipoAnimal() {
         return tipoAnimal;
@@ -145,11 +163,11 @@ public abstract class Animal implements SerVivo {
         this.edad = edad;
     }
 
-    public long getComidaConsumida() {
+    public int getComidaConsumida() {
         return comidaConsumida;
     }
 
-    public void setComidaConsumida(long comidaConsumida) {
+    public void setComidaConsumida(int comidaConsumida) {
         this.comidaConsumida = comidaConsumida;
     }
 
@@ -200,4 +218,5 @@ public abstract class Animal implements SerVivo {
     public void setCantidadDeUnidadesDestazadas(int cantidadDeUnidadesDestazadas) {
         this.cantidadDeUnidadesDestazadas = cantidadDeUnidadesDestazadas;
     }
+
 }

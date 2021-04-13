@@ -1,5 +1,7 @@
 package modelo.inanimado.elementosvisuales.suelo;
 
+import controlador.suelo.grama.AnimalControlador;
+
 import javax.swing.*;
 /*
  * Clase padre Suelo, sirve para crear las partes mas basicas de cada tipo de suelo.
@@ -8,6 +10,7 @@ import javax.swing.*;
 public class Suelo{
     protected boolean estadoCompraSuelo;        //Booleano que marca si el suelo esta comprado o no
     protected boolean disponibilidadDeSuelo;    //Boleando que especifica si el suelo esta disponible, solo en desierto debe ser falso
+
 
     public Suelo(boolean estadoCompraSuelo, boolean disponibilidadDeSuelo) {
         this.estadoCompraSuelo = estadoCompraSuelo;

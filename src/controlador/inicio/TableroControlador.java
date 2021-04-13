@@ -1,6 +1,11 @@
 package controlador.inicio;
 
+import controlador.suelo.grama.AnimalControlador;
+import controlador.suelo.grama.GramaControlador;
+import modelo.inanimado.Granja;
 import modelo.inanimado.elementosvisuales.suelo.Suelo;
+import modelo.inanimado.elementosvisuales.suelo.grama.Grama;
+import vista.pantallajuego.Base;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -13,10 +18,14 @@ import java.awt.event.ActionListener;
 public class TableroControlador implements ActionListener {
     private Suelo[][] tablero;
     private JButton[][] botones;
+    private Granja granja;
+    private Base base;
 
-    public TableroControlador(Suelo[][] tablero, JButton[][] botones) {
+    public TableroControlador(Suelo[][] tablero, JButton[][] botones, Granja granja, Base base) {
         this.tablero = tablero;
         this.botones = botones;
+        this.granja = granja;
+        this.base = base;
     }
 
     /**
@@ -40,7 +49,8 @@ public class TableroControlador implements ActionListener {
         int j = retornarJ(e);
 
         if ("Grama".equals(tablero[i][j].getTipoDeSuelo())) {
-            System.out.println("Grama en " + botones[i][j].getName());
+            GramaControlador gramaControlador = new GramaControlador(granja,(Grama) tablero[i][j], base);
+            gramaControlador.iniciarControlador();
         } else if ("Agua".equals(tablero[i][j].getTipoDeSuelo())) {
             System.out.println("Agua en " + botones[i][j].getName());
         } else if ("Desierto".equals(tablero[i][j].getTipoDeSuelo())) {
@@ -82,5 +92,6 @@ public class TableroControlador implements ActionListener {
         }
         return x;
     }
+
 
 }

@@ -1,23 +1,28 @@
 package modelo.inanimado.elementosvisuales.suelo.grama;
 
+import controlador.suelo.grama.AnimalControlador;
 import modelo.inanimado.elementosvisuales.suelo.Suelo;
 import modelo.vivo.SerVivo;
 import modelo.vivo.jugador.Granjero;
 
 import java.util.Random;
-/*
+/**
  * Clase grama
  * @ author abnerhl
  */
 public class Grama extends Suelo {
-    private SerVivo serVivo;            //Alverga al animal o planta de la casilla
+    private SerVivo serVivo;            //Animal o planta de la casilla
     private int fertibilidad;           //aleatorio de fertilidad
     private Random rd = new Random();   //random
-
+    private AnimalControlador animalcontrol;
 
     public Grama(boolean estadoCompraSuelo) {
         super(estadoCompraSuelo, true);
         this.fertibilidad = rd.nextInt(3) + 1;
+    }
+
+    public void iniciarControladorAnimal() {
+        ///animalcontrol = new AnimalControlador(g)
     }
 
     public SerVivo getSerVivo() {
@@ -51,5 +56,13 @@ public class Grama extends Suelo {
     @Override
     public String getTipoDeSuelo() {
         return "Grama";
+    }
+
+    public AnimalControlador getAnimalcontrol() {
+        return animalcontrol;
+    }
+
+    public void setAnimalcontrol(AnimalControlador animalcontrol) {
+        this.animalcontrol = animalcontrol;
     }
 }

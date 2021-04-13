@@ -6,8 +6,6 @@ import modelo.inanimado.productos.alimento.TipoAlimento;
 import modelo.inanimado.productos.materiales.MateriaPrima;
 import modelo.vivo.animal.Animal;
 import modelo.vivo.animal.TipoAnimal;
-import modelo.vivo.animal.herbivoro.Herbivoro;
-import modelo.vivo.animal.omnivoro.Omnivoro;
 import modelo.vivo.jugador.Granjero;
 import modelo.vivo.vegetal.Planta;
 import modelo.vivo.vegetal.fruta.Fruta;
@@ -50,7 +48,7 @@ public class Granja {
 
         animales = new Animal[2];
 
-        animales[0] = new Herbivoro(TipoAnimal.HERBIVORO, "Vaca");
+        animales[0] = new Animal(TipoAnimal.HERBIVORO, "Vaca");
         String [] productosRecogerVaca = {"Leche"};
         animales[0].setProductosParaRecoger(productosRecogerVaca);
         int[] cantProductosParaRecogerVaca = {100};
@@ -60,7 +58,7 @@ public class Granja {
         int[] cantProductosParaDestazarVaca = {25, 75};
         animales[0].setCantProductosParaDestazar(cantProductosParaDestazarVaca);
 
-        animales[1] = new Omnivoro(TipoAnimal.OMNIVORO, "Gallina");
+        animales[1] = new Animal(TipoAnimal.OMNIVORO, "Gallina");
         String [] productosRecogerGallina = {"Huevos"};
         animales[1].setProductosParaRecoger(productosRecogerGallina);
         int[] cantProductosParaRecogerGallina = {100};

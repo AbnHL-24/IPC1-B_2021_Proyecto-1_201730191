@@ -67,7 +67,7 @@ public class IniciarPartidaControlador {
         base.getScrlPaneTablero().setViewportView(base.getPnlTablero());
 
         //Llamo al cotrolador que escucha los clicks en los botones.
-        TableroControlador tableroControlador = new TableroControlador(this.tablero, this.botones);
+        TableroControlador tableroControlador = new TableroControlador(this.tablero, this.botones, granja, base);
         tableroControlador.iniciar();
         MenusControlador menusControlador = new MenusControlador(base, granja);
         menusControlador.iniciar();

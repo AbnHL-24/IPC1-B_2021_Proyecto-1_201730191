@@ -34,6 +34,16 @@ public abstract class Planta  implements SerVivo {
         this.cantidad = 0;
     }
 
+    /**
+     * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
+     */
+    public abstract void morir();
+
+    /**
+     * Metodo cosechar() se utiliza para recoger alimentos de la planta
+     */
+    public abstract void cosechar();
+
     public int getPrecioPorSemilla() {
         return precioPorSemilla;
     }
@@ -96,19 +106,6 @@ public abstract class Planta  implements SerVivo {
 
     public void setPuntosDeVidaGenerados(int puntosDeVidaGenerados) {
         this.puntosDeVidaGenerados = puntosDeVidaGenerados;
-
-
-
-
     }
 
-    /**
-     * Metodo morir() que se utiliza para que los seres vivos partan a mejor vida.
-     */
-    public abstract void morir();
-
-    /**
-     * Metodo cosechar() se utiliza para recoger alimentos de la planta
-     */
-    public abstract void cosechar();
 }
