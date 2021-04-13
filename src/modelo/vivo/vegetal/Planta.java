@@ -13,6 +13,8 @@ public abstract class Planta  implements SerVivo {
     protected int cantidadDeSemillasParaPlantar;
     protected int alimentosGenerados;
     protected int puntosDeVidaGenerados;
+    int cantidadDeSemillasCompradas = 0;
+    int cantidadCeldasCompradas;
 
     /**
      * Constructor de Planta
@@ -76,8 +78,28 @@ public abstract class Planta  implements SerVivo {
         return puntosDeVidaGenerados;
     }
 
+    public int getCantidadDeSemillasCompradas() {
+        return cantidadDeSemillasCompradas;
+    }
+
+    public void setCantidadDeSemillasCompradas(int cantidadDeSemillasCompradas) {
+        this.cantidadDeSemillasCompradas = cantidadDeSemillasCompradas;
+    }
+
+    public int getCantidadCeldasCompradas() {
+        return cantidadCeldasCompradas;
+    }
+
+    public void setCantidadCeldasCompradas(int cantidadCeldasCompradas) {
+        this.cantidadCeldasCompradas = cantidadCeldasCompradas;
+    }
+
     public void setPuntosDeVidaGenerados(int puntosDeVidaGenerados) {
         this.puntosDeVidaGenerados = puntosDeVidaGenerados;
+
+
+
+
     }
 
     /**

@@ -1,7 +1,9 @@
 package controlador.barramenus;
 
 import controlador.barramenus.bodega.bodegaControlador;
+import controlador.barramenus.reportes.ReporteAnimalControlador;
 import controlador.barramenus.reportes.ReportePartidaControlador;
+import controlador.barramenus.reportes.ReportePlantaControlador;
 import modelo.inanimado.Granja;
 import vista.pantallajuego.Base;
 
@@ -53,12 +55,14 @@ public class MenusControlador implements ActionListener {
         } else if (e.getSource() == base.getMniMercado()) {
             System.out.println("Abrir mercado");
         } else if (e.getSource() == base.getMniReporteAnimales()) {
-            System.out.println("Abrir reportes animales");
+            ReporteAnimalControlador rac = new ReporteAnimalControlador(granja);
+            rac.iniciarControlador();
         } else if (e.getSource() == base.getMniReportePartidas()) {
             ReportePartidaControlador rpc =new ReportePartidaControlador(granja);
             rpc.iniciarControlador();
         } else if (e.getSource() == base.getMniReportePlantas()) {
-            System.out.println("Abrir reportes planta");
+            ReportePlantaControlador rpc = new ReportePlantaControlador(granja);
+            rpc.imprimirDatos();
         }
     }
 }

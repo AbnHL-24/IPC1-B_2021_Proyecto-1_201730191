@@ -16,6 +16,9 @@ public abstract class Animal implements SerVivo {
     int[] cantProductosParaRecoger;
     String[] productosParaDestazar;
     int[] cantProductosParaDestazar;
+    int cantidadDeCriasCompradas;
+    int cantidadDeUnidadesDestazadas;
+
     /**
      * edad es la edad del animal, utilizada para el metodo morir.
      */
@@ -180,5 +183,21 @@ public abstract class Animal implements SerVivo {
 
     public void setRd(Random rd) {
         this.rd = rd;
+    }
+
+    public int getCantidadDeCriasCompradas() {
+        return cantidadDeCriasCompradas;
+    }
+
+    public void setCantidadDeCriasCompradas(int cantidadDeCriasCompradas) {
+        this.cantidadDeCriasCompradas = cantidadDeCriasCompradas;
+    }
+
+    public int getCantidadDeUnidadesDestazadas() {
+        return cantidadDeUnidadesDestazadas;
+    }
+
+    public void setCantidadDeUnidadesDestazadas(int cantidadDeUnidadesDestazadas) {
+        this.cantidadDeUnidadesDestazadas = cantidadDeUnidadesDestazadas;
     }
 }
