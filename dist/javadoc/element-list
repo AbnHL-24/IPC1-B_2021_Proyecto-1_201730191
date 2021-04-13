@@ -1,6 +1,7 @@
 unnamed package
 controlador.barramenus
 controlador.barramenus.bodega
+controlador.barramenus.reportes
 controlador.inicio
 modelo.inanimado
 modelo.inanimado.elementosvisuales
@@ -20,5 +21,6 @@ modelo.vivo.vegetal
 modelo.vivo.vegetal.fruta
 modelo.vivo.vegetal.grano
 vista.barramenus.bodega
+vista.barramenus.reportes
 vista.inicio
 vista.pantallajuego

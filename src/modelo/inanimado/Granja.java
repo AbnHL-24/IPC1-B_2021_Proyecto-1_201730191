@@ -23,9 +23,16 @@ public class Granja {
     private Planta[] plantas;
     private Producto[] productos;
     private Granjero jugador;
+    private int oroGenerado = 0;
+    private int alimentoGenerado = 0;
+    private int cantidadCeldasCompradas = 0;
 
     Random rd = new Random();
 
+    /**
+     * Constructor de la clase Granja.
+     * @param jugador objeto jugador (el usuario).
+     */
     public Granja(Granjero jugador) {
         this.jugador = jugador;
     }
@@ -100,5 +107,29 @@ public class Granja {
 
     public void setJugador(Granjero jugador) {
         this.jugador = jugador;
+    }
+
+    public int getOroGenerado() {
+        return oroGenerado;
+    }
+
+    public void setOroGenerado(int oroGenerado) {
+        this.oroGenerado = oroGenerado;
+    }
+
+    public int getAlimentoGenerado() {
+        return alimentoGenerado;
+    }
+
+    public void setAlimentoGenerado(int alimentoGenerado) {
+        this.alimentoGenerado = alimentoGenerado;
+    }
+
+    public int getCantidadCeldasCompradas() {
+        return cantidadCeldasCompradas;
+    }
+
+    public void setCantidadCeldasCompradas(int cantidadCeldasCompradas) {
+        this.cantidadCeldasCompradas = cantidadCeldasCompradas;
     }
 }

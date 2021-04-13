@@ -7,12 +7,11 @@ import modelo.vivo.SerVivo;
  * @author abnerhl
  */
 public class Granjero implements SerVivo {
-    String nombre;
-    String nickName;
-    int puntosDeVida = 100;
-    long oro = 50;
-    long oroGenerado = 0;
-    long alimentooConsumido;
+    private String nombre;
+    private String nickName;
+    private int puntosDeVida = 100;
+    private long oro = 50;
+    private long alimentooConsumido;
 
     /**
      *Constructor de la clase Grangero.
@@ -46,14 +45,6 @@ public class Granjero implements SerVivo {
 
     public void setOro(long oro) {
         this.oro = oro;
-    }
-
-    public long getOroGenerado() {
-        return oroGenerado;
-    }
-
-    public void setOroGenerado(long oroGenerado) {
-        this.oroGenerado = oroGenerado;
     }
 
     public long getAlimentooConsumido() {
