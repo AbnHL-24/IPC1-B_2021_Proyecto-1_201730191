@@ -47,6 +47,8 @@ public class TableroControlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         int i = retornarI(e);
         int j = retornarJ(e);
+        tablero[i][j].setI(i);
+        tablero[i][j].setJ(j);
 
         if ("Grama".equals(tablero[i][j].getTipoDeSuelo())) {
             GramaControlador gramaControlador = new GramaControlador(granja,(Grama) tablero[i][j], base);

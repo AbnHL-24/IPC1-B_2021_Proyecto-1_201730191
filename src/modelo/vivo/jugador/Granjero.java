@@ -65,4 +65,7 @@ public class Granjero implements SerVivo {
         this.alimentooConsumido = alimentooConsumido;
     }
 
+    public void disminuirOro() {
+        oro--;
+    }
 }

@@ -13,7 +13,6 @@ public class AnimalControladorL implements ActionListener {
     Granja granja;
     Grama grama;
     Animal animal;
-    AnimalControlador animalControlador;
 
     public AnimalControladorL(Granja granja, GramaAnimal gramaAnimal, Grama grama) {
         this.gramaAnimal = gramaAnimal;

@@ -10,7 +10,8 @@ import javax.swing.*;
 public class Suelo{
     protected boolean estadoCompraSuelo;        //Booleano que marca si el suelo esta comprado o no
     protected boolean disponibilidadDeSuelo;    //Boleando que especifica si el suelo esta disponible, solo en desierto debe ser falso
-
+    protected int i;
+    protected int j;
 
     public Suelo(boolean estadoCompraSuelo, boolean disponibilidadDeSuelo) {
         this.estadoCompraSuelo = estadoCompraSuelo;
@@ -37,4 +38,19 @@ public class Suelo{
         return "Suelo";
     };
 
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
+
+    public int getJ() {
+        return j;
+    }
+
+    public void setJ(int j) {
+        this.j = j;
+    }
 }

@@ -1,5 +1,6 @@
 package modelo.inanimado;
 
+import modelo.inanimado.elementosvisuales.suelo.Suelo;
 import modelo.inanimado.productos.Producto;
 import modelo.inanimado.productos.alimento.Alimento;
 import modelo.inanimado.productos.alimento.TipoAlimento;
@@ -10,7 +11,9 @@ import modelo.vivo.jugador.Granjero;
 import modelo.vivo.vegetal.Planta;
 import modelo.vivo.vegetal.fruta.Fruta;
 import modelo.vivo.vegetal.grano.Grano;
+import vista.pantallajuego.Base;
 
+import javax.swing.*;
 import java.util.Random;
 
 /**
@@ -24,6 +27,11 @@ public class Granja {
     private int oroGenerado = 0;
     private int alimentoGenerado = 0;
     private int cantidadCeldasCompradas = 0;
+
+    private Suelo[][] tablero;
+    private JButton[][] botones;
+
+    private Base base;
 
     Random rd = new Random();
 
@@ -129,5 +137,29 @@ public class Granja {
 
     public void setCantidadCeldasCompradas(int cantidadCeldasCompradas) {
         this.cantidadCeldasCompradas = cantidadCeldasCompradas;
+    }
+
+    public Suelo[][] getTablero() {
+        return tablero;
+    }
+
+    public void setTablero(Suelo[][] tablero) {
+        this.tablero = tablero;
+    }
+
+    public JButton[][] getBotones() {
+        return botones;
+    }
+
+    public void setBotones(JButton[][] botones) {
+        this.botones = botones;
+    }
+
+    public Base getBase() {
+        return base;
+    }
+
+    public void setBase(Base base) {
+        this.base = base;
     }
 }

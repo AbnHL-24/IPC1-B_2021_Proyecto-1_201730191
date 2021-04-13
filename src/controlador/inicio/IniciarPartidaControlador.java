@@ -37,13 +37,24 @@ public class IniciarPartidaControlador {
      */
     public void generarPartida() {
         //Se crea al granjero
-        jugador = new Granjero(bienvenida.getTxtFNombre().getText(), bienvenida.getTxtFNickName().getText());
+        String nombre = bienvenida.getTxtFNombre().getText();
+        String nickName = bienvenida.getTxtFNickName().getText();
+        if (nombre ==  null) {
+            nombre = "usuario";
+        }
+        if (nickName == null) {
+            nickName = "jugador";
+        }
+        jugador = new Granjero(nombre, nickName);
         granja = new Granja(jugador);
+        granja.setBotones(botones);
+        granja.setTablero(tablero);
         //Crea las cosas que tiene la granja, animales, plantas, etc.
         granja.iniciarGranja();
 
         //Se crea la base del juego y muestra en pantalla
         Base base = new Base();
+        granja.setBase(base);
         base.setResizable(true);
         base.setLocationRelativeTo(null);
         base.setVisible(true);
